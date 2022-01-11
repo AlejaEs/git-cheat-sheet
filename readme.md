@@ -1,1 +1,1 @@
-holi
+Práctica de comandos de Git. 
