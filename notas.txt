@@ -1,0 +1,33 @@
+=======================
+= crear un repositorio
+=======================
+
+echo "CUALQUIER TEXTO" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+SSH: git remote add origin git@github.com:{usuario}/{nombrerepositorio}.git
+HTTPS: https://github.com/{usuario}/{nombrerepositorio}.git
+git push -u origin main
+
+1. Fork de Aleja a mi repo en github
+2. git clone git@github.com:chybeat/git-cheat-sheet.git
+3. cd git-cheat-sheet/ (Se puede cambiar el nombre de la carpeta sin ningun problema)
+
+
+4. git remote add aleja git@github.com:AlejaEs/git-cheat-sheet.git 
+5. git pull aleja main
+
+1. `git branch --list`
+
+    > Verificar las ramas creadas dentro del repositorio para elegir un nombre para la rama donde vas a trabajar.
+
+1. `git branch {nombre}`
+
+    > Crea una rama con tu usuario de GitHub, tu nick o tu nombre.
+
+8. trabajar los cambios en editor de codigo
+9. git commit -am "explicar el nuevo cambio"
+10. git push origin main
+11. solicitar el push request

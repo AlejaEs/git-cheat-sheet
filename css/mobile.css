@@ -1,0 +1,48 @@
+/*******************
+Estilos de etiquetas
+*******************/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif;
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6em;
+}
+
+/****************************
+Estilos de clases principales
+****************************/
+
+.main-header {
+	align-items: center;
+	background-color: #456e67;
+	background-size: 25%;
+	display: flex;
+	justify-content: center;
+	min-height: 6em;
+	position: relative;
+}
+
+.main-header__background-image {
+	background-image: url(../assets/img/header-sprite.svg);
+	background-position: -50%;
+	filter: blur(1px);
+	height: 100%;
+	opacity: 0.2;
+	position: absolute;
+	width: 100%;
+}
+
+.main-header__title {
+	color: #f1f1f1;
+	font-size: 6em;
+	text-transform: uppercase;
+	text-shadow: 2px 2px #00000050, 2px 2px 2px #00000050, -2px -2px 2px #00000050, 2px -2px 2px #00000050;
+}
