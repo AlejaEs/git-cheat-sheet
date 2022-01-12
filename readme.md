@@ -48,7 +48,7 @@
 
     > **HTTPS**: {repositorio_remoto} cambia por:`https://github.com/{usuario}/{nombrerepositorio}.git`
 
-    > Se debe tener en cuenta que ninguna dirección lleva llaves ni en el usuario ni en el nombre del repositorio. Ej: `https://github.com/chybeat/git-cheat-sheet.git` ó `git@github.com:chybeat/git-cheat-sheet.git`.
+    > Se debe tener en cuenta que ninguna dirección lleva llaves, ni en el usuario, ni en el nombre del repositorio. Ej: `https://github.com/chybeat/git-cheat-sheet.git` ó `git@github.com:chybeat/git-cheat-sheet.git`.
 
 1. `git push -u origin main`
     > Envía los archivos hasta 'origin' desde la rama 'main'. La bandera -u coloca la rama 'main' como la rama predeterminada para sincronizar en el repositorio remoto.
