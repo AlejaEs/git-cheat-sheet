@@ -1,7 +1,5 @@
 # Práctica de comandos de Git.
 
-## Crear un repositorio
-
 ---
 
 ### Ten en cuenta:
@@ -10,11 +8,16 @@
 -   El texto entre llaves en los comandos lo debes cambiar según se te indique o por el texto que mejor te parezca.
     Ejemplo:
     Quieres cambiar el nombre de la carpeta 'git-cheat-sheet' por 'proyectito-git'.
-    En esta ayuda entrarás un código como: `mv git-cheat-sheet {nuevo_nombre}`
+    \
+     En esta ayuda encontrarás un código como: `mv git-cheat-sheet {nuevo_nombre}`.
+    \
     Debes escribir: `mv git-cheat-sheet proyectito-git`
+    \
     El texto a cambiar estará dentro de llaves `{}` y el texto que elijas o requieras debe ir sin llaves.
 
 ---
+
+## Crear un repositorio
 
 1. Generar un achivo readme.md
    `echo "Mi repositorio" >> readme.md`
@@ -56,45 +59,46 @@
 
 1. Haz Fork desde el repositorio principal a tu cuenta en github.
 
-    > Abrir el [repositorio principal](https://github.com/AlejaEs/git-cheat-sheet) y dar click en el botón de 'Fork'.
+    > Abrir el [repositorio principal](https://github.com/AlejaEs/git-cheat-sheet) y haz clic en el botón de 'Fork'.
 
 1. `git clone https://github.com/{usuario}/git-cheat-sheet.git`
 
-    > Clona el repositorio nuevo en tu cuenta de GitHub a la carpeta para proyectos de tu computador. `{usuario}` se debe reemplazar por el nombre de tu usuario en github. Las direcciónes HTTPS y SSH las puedes encontrar en el botón 'Code' del repositorio en tu cuenta de gitHub.
+    > Clona el repositorio al que acabas de hacer fork desde tu cuenta de GitHub a la carpeta para proyectos de tu computador. `{usuario}` se debe reemplazar por el nombre de tu usuario en github. Las direcciónes HTTPS y SSH las puedes encontrar en el botón 'Code' del repositorio en tu cuenta de gitHub.
 
 1. `cd git-cheat-sheet/`
 
     > Entra en la carpeta de tu repositorio local. Puedes renombrar la carpeta local con el comando
+    > \
     > `mv git-cheat-sheet {nuevo_nombre}`
     > antes de acceder a la carpeta.
 
 1. `git remote add upstream git@github.com:AlejaEs/git-cheat-sheet.git`
 
-    > Agregar el repositorio principal como el origen remoto desde donde se traerá la ultima version del código subido por todos. **Tener en cuenta que:** la dirección cambia según la conexión, sea HTTP o SSH y `upstream` es un nombre sugerido y una buena practica, pero puedes colocar cualquier nombre.
+    > Agregar el [repositorio principal](https://github.com/AlejaEs/git-cheat-sheet) (el de [AljeaES](https://github.com/AlejaEs)) como el origen remoto desde donde se traerá la ultima version del código subido por todos. **Ten en cuenta que:** la dirección cambia según la conexión, sea HTTP o SSH y `upstream` es un nombre sugerido y una buena practica, pero puedes colocar cualquier nombre.
 
 1. `git pull upstream main`
 
-    > Obtener la última actualización de los archivos desde el repositorio principal (upstream)en tu repositorio local. _¡¡Este paso se debe realizar cada vez que vaya a trabajar en el proyecto!!_.
+    > Obtener la última actualización de los archivos desde el [repositorio principal](https://github.com/AlejaEs/git-cheat-sheet) (el de [AljeaES](https://github.com/AlejaEs) lo mismo que `upstream`) en tu repositorio local. _¡¡Este paso se debe realizar cada vez que vayas a trabajar en el proyecto!!_.
 
 1. Trabaja en alguno de los archivos en tu editor de código
 
-    > Manos a la obra!. Comienza a realizar aportes y correciones, mejoras y todo lo que pueda contribuir a mejorar este repositorio!.
+    > Manos a la obra!. Comienza a realizar aportes, correciones, mejoras y todo lo que pueda contribuir a mejorar este proyecto!.
 
 1. `git add .`
 
-    > Agrega todo el nuevo contenido al staging del repositorio
+    > Agrega todo el nuevo contenido al staging de tu repositorio local.
 
 1. `git commit -m "{explicar el nuevo cambio}"`
 
-    > Realiza un commit a tu repositorio con los cambios realizados. La bandera `-m` permite escribir un mensaje para el commit. En el mensaje, de modo muy resumido, cuéntanos que hiciste.
+    > Realiza un commit a tu repositorio con los cambios realizados. La bandera `-m` permite escribir un mensaje para el commit. En el mensaje de modo muy resumido, cuéntanos que hiciste.
 
 1. `git push origin main`
 
-    > Sube tus cambios al repositorio en Github (tu cuenta). ten en cuenta que 'origin' se estableció automáticamente cuando realizaste `git clone ...`
+    > Sube tus cambios al repositorio en Github (a tu cuenta). Debes saber que 'origin' se estableció automáticamente cuando realizaste `git clone ...`
 
-1. Solicita un pull request!
+1. Solicita un Pull request!
 
-    > Desde la página web de tu repositorio, busca la pestaña "Pull request", y da click en el botón "New pull request", desde allí se enviaran los cambios al repositorio principal.
+    > En la página web de tu repositorio, busca la pestaña "Pull request", y da click en el botón "New pull request", desde allí se enviaran los cambios al repositorio principal.
 
     **Recuerda**: Siempre haz pull de las ultimas versiones antes de trabajar desde el repositorio principal con `git pull upstream main`
 
