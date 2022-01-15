@@ -4,16 +4,105 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/mobile.css" />
+		<link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width:800px)" />
+		<link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:1024px)" />
 		<title>Comandos de Git</title>
 	</head>
 	<body>
-		<h1>Comandos principales de git</h1>
+		<header class="main-header">
+			<div class="main-header__background-image"></div>
+			<h1 class="main-header__title">Comandos principales de git</h1>
+		</header>
+		
+		<section>
+			<h1>GitHub</h1>
+			<h2>Comandos de Git para GitHub - Guía Completa</h2>
+			<br>
+			<p>Git es el sistema de control de versiones distribuido de fuente abierta que facilita las actividades de GitHub en su computadora portátil o de escritorio</p>
+			<p>Esta página web se hace con el fin de darles a conocer los comandos mas usados en Git. Es una página secilla, para un bien comun</p>
 
-		<p>Git es el sistema de control de versiones distribuido de fuente abierta que facilita las actividades de GitHub en su
-            computadora portátil o de escritorio</p>
-		<p>
-			Esta página web se hace con el fin de darles a conocer los comandos mas usados en Git. Es una página secilla, para un bien comun
-		</p>
-		<p>Andy test!</p>
+			<br><p>Andy test!</p>
+			<br>
+			<div>
+				<h3> INSTALAR GIT</h3>
+				<br><br>
+			</div>	
+				<hr>
+				<br>
+			<div>
+				<h3>VARIABLES DE CONFIGURACION</h3>
+				<P>Configura la información del usuario para todos los repositorios locales.</P> 
+				<br>
+				<p>
+					<code class="code"> <b>$ git config --global user.name "[name]"</b></code>
+				</p>
+				<p>Establece el nombre que desea que esté anexado a sus commits</p><br>
+				<p>
+					<code class="code"><b>$ git config --global user.email "[email address]"</b></code>
+				</p>
+				<p>Establece el e-mail que desea que esté anexado a sus commits</p><br>
+				<p>
+					<code class="code"><b>$ git config --global color.ui auto</b></code>
+				</p>
+				<p>Habilita la colorización del producto de la línea de comando</p><br>
+				<p>
+					<code class="code"><b>$ git config --global init.defaultBranch main</b></code>
+				</p>
+				<p>Establece el nombre que desea que esté anexado a sus commits</p><br>
+			</div>
+			<hr><br>
+			<h3>CREAR REPOSITORIOS</h3>
+			<p>Inicia un nuevo repositorio u obtiene uno de una URL existente</p><br>
+			<div>
+				<ul>
+					<li>						
+						<code class="code"><b>$ git init</b></code>
+						<p> Creará un nuevo repositorio local .GIT, en el directorio actual</p>			
+					</li>
+				</ul><br>
+				<ul>
+					<li>						
+						<code class="code"><b>$ git init [project-name]</b></code>
+						<p> Como alternativa, puedes crear un nuevo repositorio dentro de un nuevo directorio con el nombre especificado</p>			
+					</li>
+				</ul><br>
+				<ul>
+					<li>						
+						<code class="code"><b>$ git clone [url]</b></code>
+						<p> Se usa para copiar un repositorio y toda su historia de versiones</p>		
+					</li>
+				</ul><br>
+			</div>
+			<hr><br>
+			<h3>EFECTUAR CAMBIOS</h3>
+			<p>Revisa las ediciones y elabora una transacción de commit</p><br>
+			<p>
+				<code class="code"> <b>$ git status</b></code>
+			</p>
+			<p>Muestra la lista de los archivos que se han cambiado junto con los archivos que están por ser preparados o confirmados</p><br>
+			<p>
+				<code class="code"> <b>$ git diff</b></code>
+			</p>
+			<p>Muestra las diferencias de archivos que no se han enviado aún al área de espera</p><br>	
+			<p>
+				<code class="code"> <b>$ git diff --staged</b></code>
+			</p>
+			<p>Muestra las diferencias del archivo entre el área de espera y la última versión del archivo</p><br>				
+			<p>
+				<code class="code"> <b>$ git add [file]</b></code>
+			</p>
+			<p>Añade todos los archivos nuevos, modificados y eliminados a la confirmación pendiente en el repositorio local.</p><br>
+			<p>
+				<code class="code"> <b>$ git reset [file]</b></code>
+			</p>
+			<p>Mueve el archivo del área de espera, pero preserva su contenido</p><br>
+			<p>
+				<code class="code"> <b>$ git commit -m "[El mensaje que acompaña al commit va aquí]"</b></code>
+			</p>
+			<p>Registra las instantáneas del archivo permanente en el historial de versiones</p><br>
+		</section>
+
+		
 	</body>
 </html>

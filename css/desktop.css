@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+h1{
+    font-family: 'Crete Round', serif;
+}
+
+h2,h3{
+    font-family: 'Domine', serif;
+}
+
+.code{
+    background-color: gainsboro;
+}
