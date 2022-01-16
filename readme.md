@@ -1,6 +1,6 @@
 # Práctica de comandos de Git.
 
-**Puedes ver la página web [desde aqui](https://chybeat.github.io/git-cheat-sheet/)**
+**Puedes ver la página web [desde aqui](https://alejaes.github.io/git-cheat-sheet/)**
 
 ---
 
@@ -98,7 +98,7 @@
 
    > Sube tus cambios al repositorio en Github (a tu cuenta). Debes saber que 'origin' se estableció automáticamente cuando realizaste `git clone ...`
 
-1. Solicita un Pull request!
+1. Solicita un Pull reque
 
    > En la página web de tu repositorio, busca la pestaña "Pull request", y da click en el botón "New pull request", desde allí se enviaran los cambios al repositorio principal.
 
@@ -106,4 +106,4 @@
 
 ---
 
-**Puedes ver la página web [desde aqui](https://chybeat.github.io/git-cheat-sheet/)**
+**Puedes ver la página web [desde aqui](https://alejaes.github.io/git-cheat-sheet/)**
