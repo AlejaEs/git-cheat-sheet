@@ -28,6 +28,7 @@ Estilos de clases principales
 	justify-content: center;
 	min-height: 6em;
 	position: relative;
+	padding: 1em;
 }
 
 .main-header__background-image {
@@ -41,8 +42,9 @@ Estilos de clases principales
 }
 
 .main-header__title {
+	width: 100%;
+	text-align: center;
 	color: #f1f1f1;
-	font-size: 6em;
 	text-transform: uppercase;
 	text-shadow: 2px 2px #00000050, 2px 2px 2px #00000050, -2px -2px 2px #00000050, 2px -2px 2px #00000050;
 }
