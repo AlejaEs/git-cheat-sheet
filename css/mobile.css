@@ -1,3 +1,17 @@
+/*****************
+Variables de color
+*****************/
+:root {
+	--border-color-soft: #e7e7e7;
+	--code-background-color: gainsboro;
+	--code-text-background-color: #b7bdc3;
+	--header-background-color: #456e67;
+	--link-text-color-hover: #eb8629;
+	--link-text-color: #234cf1;
+	--shadow-dark-color: #00000050;
+	--title-light-color: #f1f1f1;
+}
+
 /*******************
 Estilos de etiquetas
 *******************/
@@ -8,7 +22,6 @@ Estilos de etiquetas
 }
 
 html {
-	font-family: sans-serif;
 	font-size: 10px;
 }
 
@@ -16,13 +29,23 @@ body {
 	font-size: 1.6em;
 }
 
+a {
+	color: var(--link-text-color);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--link-text-color-hover);
+	text-decoration: underline;
+}
+
 /****************************
 Estilos de clases principales
 ****************************/
 
+/* Etiqueta header dentro de body*/
 .main-header {
 	align-items: center;
-	background-color: #456e67;
+	background-color: var(--header-background-color);
 	background-size: 25%;
 	display: flex;
 	justify-content: center;
@@ -41,59 +64,132 @@ Estilos de clases principales
 }
 
 .main-header__title {
-	color: #f1f1f1;
-	font-size: 6em;
+	color: var(--title-light-color);
+	text-shadow: 2px 2px var(--shadow-dark-color),
+		2px 2px 2px var(--shadow-dark-color),
+		-2px -2px 2px var(--shadow-dark-color),
+		2px -2px 2px var(--shadow-dark-color);
 	text-transform: uppercase;
-	text-shadow: 2px 2px #00000050, 2px 2px 2px #00000050,
-		-2px -2px 2px #00000050, 2px -2px 2px #00000050;
 }
 
-/*******************
-Estilos de etiquetas
-*******************/
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+/* Etiqueta section clase intro dentro de body*/
+.intro {
+	margin: 1em auto;
 }
 
-html {
-	font-family: sans-serif;
-	font-size: 10px;
-}
-
-body {
-	font-size: 1.6em;
-}
-
-/****************************
-Estilos de clases principales
-****************************/
-
-.main-header {
-	align-items: center;
-	background-color: #456e67;
-	background-size: 25%;
-	display: flex;
-	justify-content: center;
-	min-height: 6em;
-	position: relative;
-}
-
-.main-header__background-image {
-	background-image: url(../assets/img/header-sprite.svg);
-	background-position: -50%;
-	filter: blur(1px);
-	height: 100%;
-	opacity: 0.2;
-	position: absolute;
+.about-git {
+	flex-grow: 1;
+	margin: 0 auto;
+	max-width: 40em;
+	padding: 0 0.5em;
 	width: 100%;
 }
 
-.main-header__title {
-	color: #f1f1f1;
-	font-size: 6em;
+.about-git__title {
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+.about-git__text {
+	margin-bottom: 1em;
+}
+.about-git__text:last-child {
+	margin-bottom: 0;
+}
+
+/* Etiqueta section clase commands dentro de body*/
+.commands {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1em auto;
+}
+
+.subject {
+	margin: 1em auto;
+	max-width: 30em;
+	padding: 0 0.5em;
+	width: 100%;
+}
+
+.subject__title {
+	margin-bottom: 0.25em;
+	text-align: center;
 	text-transform: uppercase;
-	text-shadow: 2px 2px #00000050, 2px 2px 2px #00000050,
-		-2px -2px 2px #00000050, 2px -2px 2px #00000050;
+}
+.subject__description {
+	margin-bottom: 0.5em;
+}
+
+.code {
+	background-color: var(--code-background-color);
+	border-bottom: 1px solid var(--border-color-soft);
+	margin: 0 auto 0.1em;
+}
+.code:last-child {
+	margin-bottom: 0;
+}
+
+.code__description {
+	display: block;
+	padding: 0.1em;
+}
+
+.code__text {
+	background-color: var(--code-text-background-color);
+	display: block;
+	padding: 0.3em;
+	font-weight: bold;
+}
+
+/* etiqueta footer principal dentro de body*/
+
+.footer {
+	padding: 1em;
+	background-color: var(--code-text-background-color);
+	color: var(--title-light-color);
+}
+
+.footer__title {
+	text-align: center;
+	margin-bottom: 1em 0.5em;
+}
+
+.humans {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.humans__person {
+	width: fit-content;
+	display: grid;
+	grid-gap: 0em 0.5em;
+	grid-template-areas:
+		"humans__flag humans__name"
+		"humans__flag humans__location"
+		"human__linkedin human__linkedin";
+	grid-template-columns: 60px 1fr;
+	grid-template-rows: 1fr 1fr 2em;
+	padding: 1em 0.5em;
+	max-width: 100%;
+}
+.humans__flag {
+	grid-area: humans__flag;
+}
+.humans__name {
+	grid-area: humans__name;
+}
+.humans__location {
+	grid-area: humans__location;
+}
+.human__linkedin {
+	align-self: end;
+	grid-area: human__linkedin;
+	text-align: center;
+}
+
+.human__linkedin:hover {
+	color: var(--shadow-dark-color);
 }

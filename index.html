@@ -4,16 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/freakflags.css" />
+
 		<link rel="stylesheet" href="./css/mobile.css" />
 		<link
 			rel="stylesheet"
 			href="./css/tablet.css"
-			media="screen and (min-width:800px)"
+			media="screen and (min-width:768px)"
 		/>
 		<link
 			rel="stylesheet"
 			href="./css/desktop.css"
-			media="screen and (min-width:1024px)"
+			media="screen and (min-width:1000px)"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/wider.css"
+			media="screen and (min-width:1460px)"
 		/>
 		<title>Comandos de Git</title>
 	</head>
@@ -23,22 +34,27 @@
 			<h1 class="main-header__title">Comandos principales de git</h1>
 		</header>
 
+		<section class="intro">
+			<article class="about-git">
+				<h2 class="about-git__title">
+					Comandos de Git para GitHub - Guía Completa
+				</h2>
+				<p class="about-git__text">
+					Git es el sistema de control de versiones de código abierto que
+					facilita las actividades de GitHub en su computadora portátil o
+					de escritorio
+				</p>
+				<p class="about-git__text">
+					Esta página web se hace con el fin de darte a conocer los
+					comandos mas usados en Git. Es una página secilla, para un bien
+					común.
+				</p>
+			</article>
+		</section>
 		<section class="commands">
-			<h1>GitHub</h1>
-			<h2>Comandos de Git para GitHub - Guía Completa</h2>
-			<br />
-			<p>
-				Git es el sistema de control de versiones distribuido de fuente
-				abierta que facilita las actividades de GitHub en su computadora
-				portátil o de escritorio
-			</p>
-			<p>
-				Esta página web se hace con el fin de darles a conocer los comandos
-				mas usados en Git. Es una página secilla, para un bien comun
-			</p>
-			<article id="install" class="reference__data">
-				<h3 class="reference__title">Instalar git</h3>
-				<p class="reference__text">
+			<article id="install" class="subject">
+				<h3 class="subject__title">Instalar git</h3>
+				<p class="subject__description">
 					Git se puede adquirir para los sistemas operativos más relevantes
 					directamente desde
 					<a
@@ -46,8 +62,9 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						>https://git-scm.com/downloads</a
-					>. Su operación se realiza desde la línea de comandos Bash (para
-					MacOS o Linux), en el caso de Windows, Bash es emulado con
+					>. Su operación se realiza desde la línea de comandos o terminal
+					en para MacOS o Linux. En Windows se debe emular la terminal de
+					Linux con
 					<a
 						href="https://www.atlassian.com/git/tutorials/git-bash"
 						target="_blank"
@@ -89,14 +106,16 @@
 					>
 				</p>
 				<p class="code">
-					<code class="code">$git config --global color.ui auto</code>
+					<code class="code__text"
+						>$git config --global color.ui auto</code
+					>
 					<span class="code__description"
 						>Habilita la colorización del producto de la línea de
 						comando</span
 					>
 				</p>
 				<p class="code">
-					<code class="code"
+					<code class="code__text"
 						>$ git config --global init.defaultBranch main</code
 					>
 					<span class="code__description"
@@ -111,21 +130,21 @@
 					Inicia un nuevo repositorio u obtiene uno de una URL existente
 				</p>
 				<p class="code">
-					<code class="code">$ git init</code>
+					<code class="code__text">$ git init</code>
 					<span class="code__description"
 						>Creará un nuevo repositorio local .GIT, en el directorio
 						actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git init [project-name]</code>
+					<code class="code__text">$ git init [project-name]</code>
 					<span class="code__description"
 						>Como alternativa, puedes crear un nuevo repositorio dentro de
 						un nuevo directorio con el nombre especificado</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git clone [url]</code>
+					<code class="code__text">$ git clone [url]</code>
 					<span class="code__description"
 						>Se usa para copiar un repositorio y toda su historia de
 						versiones</span
@@ -138,7 +157,7 @@
 					Revisa las ediciones y elabora una transacción de commit
 				</p>
 				<p class="code">
-					<code class="code">$ git status</code>
+					<code class="code__text">$ git status</code>
 					<span class="code__description"
 						>Muestra la lista de los archivos que se han cambiado junto
 						con los archivos que están por ser preparados o
@@ -146,35 +165,35 @@
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git diff</code>
+					<code class="code__text">$ git diff</code>
 					<span class="code__description"
 						>Muestra las diferencias de archivos que no se han enviado aún
 						al área de espera</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git diff --staged</code>
+					<code class="code__text">$ git diff --staged</code>
 					<span class="code__description"
 						>Muestra las diferencias del archivo entre el área de espera y
 						la última versión del archivo</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git add [file]</code>
+					<code class="code__text">$ git add [file]</code>
 					<span class="code__description"
 						>Añade todos los archivos nuevos, modificados y eliminados a
 						la confirmación pendiente en el repositorio local.</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git reset [file]</code>
+					<code class="code__text">$ git reset [file]</code>
 					<span class="code__description"
 						>Mueve el archivo del área de espera, pero preserva su
 						contenido</span
 					>
 				</p>
 				<p class="code">
-					<code class="code"
+					<code class="code__text"
 						>$ git commit -m "[El mensaje que acompaña al commit va
 						aquí]"</code
 					>
@@ -190,55 +209,45 @@
 					Nombra una serie de commits y combina esfuerzos ya culminados
 				</p>
 				<p class="code">
-					<code class="code">$ git branch</code>
+					<code class="code__text">$ git branch</code>
 					<span class="code__description"
 						>Enumera todas las ramas en el repositorio actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git branch [branch-name]</code>
+					<code class="code__text">$ git branch [branch-name]</code>
 					<span class="code__description">Crea una nueva rama</span>
 				</p>
 				<p class="code">
-					<code class="code">$ git checkout [branch-name]</code>
+					<code class="code__text">$ git checkout [branch-name]</code>
 					<span class="code__description"
 						>Cambia a la rama especificada y actualiza el directorio
 						activo</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git merge [branch]</code>
+					<code class="code__text">$ git merge [branch]</code>
 					<span class="code__description"
 						>Combina el historial de la rama especificada con la rama
 						actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git branch -d [branch-name]</code>
+					<code class="code__text">$ git branch -d [branch-name]</code>
 					<span class="code__description">Borra la rama especificada</span>
 				</p>
 			</article>
 			<!--
 				Emmet para crear un nuevo tema
-				article.subject>h3.subject__title+p.subject__description+p.code>code.code+span.code__description
+				article.subject>h3.subject__title+p.subject__description+p.code>code__text.code+span.code__description
 			-->
 		</section>
 		<footer class="footer">
 			<h2 class="footer__title">Creado por:</h2>
 			<ul class="humans">
 				<li class="humans__person">
-					<span class="humans__name">Dario Paladines</span
-					><span class="humans__country flag-ecuador">Cuenca, Ecuador</span
-					><a
-						href="https://www.linkedin.com/in/dario-paladines-8648521aa/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="human__linkedin"
-						>Conoceme en Linkedin</a
-					>
-				</li>
-				<li class="humans__person">
-					<span class="humans__name">Alejandra Espinoza Jimenez</span
+					<span class="humans__flag fflag fflag-CO ff-xl ff-wave"></span>
+					<span class="humans__name">Alejandra Espinoza</span
 					><span class="humans__country icon flag-colombia"
 						>Bogotá, Colombia</span
 					><a
@@ -246,10 +255,24 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="human__linkedin"
-						>Mira mi perfil en linkedin</a
+						>Conóceme en Linkedin</a
 					>
 				</li>
 				<li class="humans__person">
+					<span class="humans__flag fflag fflag-EC ff-xl ff-wave"></span
+					><span class="humans__name">Dario Paladines</span
+					><span class="humans__location">Cuenca, Ecuador</span
+					><a
+						href="https://www.linkedin.com/in/dario-paladines-8648521aa/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="human__linkedin"
+						>Conóceme en Linkedin</a
+					>
+				</li>
+
+				<li class="humans__person">
+					<span class="humans__flag fflag fflag-CO ff-xl ff-wave"></span>
 					<span class="humans__name">Andrés Salazar</span
 					><span class="humans__country icon flag-colombia"
 						>Bogotá Colombia</span
@@ -258,7 +281,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="human__linkedin"
-						>Un perfil en linkedin que tengo</a
+						>Conóceme en Linkedin</a
 					>
 				</li>
 			</ul>
