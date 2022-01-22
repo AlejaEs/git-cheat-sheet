@@ -4,16 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/freakflags.css" />
+
 		<link rel="stylesheet" href="./css/mobile.css" />
 		<link
 			rel="stylesheet"
 			href="./css/tablet.css"
-			media="screen and (min-width:800px)"
+			media="screen and (min-width:768px)"
 		/>
 		<link
 			rel="stylesheet"
 			href="./css/desktop.css"
-			media="screen and (min-width:1024px)"
+			media="screen and (min-width:1000px)"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/wider.css"
+			media="screen and (min-width:1460px)"
 		/>
 		<title>Comandos de Git</title>
 	</head>
@@ -23,25 +34,50 @@
 			<h1 class="main-header__title">Comandos principales de git</h1>
 		</header>
 
+		<section class="intro">
+			<article class="about-git">
+				<h2 class="about-git__title">
+					Comandos de Git para GitHub - Guía Completa
+				</h2>
+				<p class="about-git__text">
+					Git es el sistema de control de versiones de código abierto que
+					facilita las actividades de GitHub en su computadora portátil o de
+					escritorio
+				</p>
+				<p class="about-git__text">
+					Esta página web se hace con el fin de darte a conocer los comandos mas
+					usados en Git. Es una página secilla, para un bien común.
+				</p>
+			</article>
+		</section>
 		<section class="commands">
-			<h1>GitHub</h1>
-			<h2>Comandos de Git para GitHub - Guía Completa</h2>
-			<br />
-			<p>
-				Git es el sistema de control de versiones distribuido de fuente abierta
-				que facilita las actividades de GitHub en su computadora portátil o de
-				escritorio
-			</p>
-			<p>
-				Esta página web se hace con el fin de darles a conocer los comandos mas
-				usados en Git. Es una página secilla, para un bien comun
-			</p>
-
-			<br />
-			<p>Andy test!</p>
-			<br />
-			<article>
-				<h3>INSTALAR GIT</h3>
+			<article id="install" class="subject">
+				<h3 class="subject__title">Instalar git</h3>
+				<p class="subject__description">
+					Git se puede adquirir para los sistemas operativos más relevantes
+					directamente desde
+					<a
+						href="https://git-scm.com/downloads"
+						target="_blank"
+						rel="noopener noreferrer"
+						>https://git-scm.com/downloads</a
+					>. Su operación se realiza desde la línea de comandos o terminal en
+					para MacOS o Linux. En Windows se debe emular la terminal de Linux con
+					<a
+						href="https://www.atlassian.com/git/tutorials/git-bash"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Git Bash</a
+					>
+					que viene en el programa de instalación. Puedes obtener más
+					información sobre git bash desde
+					<a
+						href="https://www.atlassian.com/git/tutorials/git-bash"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Atlassian</a
+					>
+				</p>
 			</article>
 			<article class="subject">
 				<h3 class="subject__title">VARIABLES DE CONFIGURACION</h3>
@@ -66,13 +102,13 @@
 					>
 				</p>
 				<p class="code">
-					<code class="code">$git config --global color.ui auto</code>
+					<code class="code__text">$git config --global color.ui auto</code>
 					<span class="code__description"
 						>Habilita la colorización del producto de la línea de comando</span
 					>
 				</p>
 				<p class="code">
-					<code class="code"
+					<code class="code__text"
 						>$ git config --global init.defaultBranch main</code
 					>
 					<span class="code__description"
@@ -86,21 +122,21 @@
 					Inicia un nuevo repositorio u obtiene uno de una URL existente
 				</p>
 				<p class="code">
-					<code class="code">$ git init</code>
+					<code class="code__text">$ git init</code>
 					<span class="code__description"
 						>Creará un nuevo repositorio local .GIT, en el directorio
 						actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git init [project-name]</code>
+					<code class="code__text">$ git init [project-name]</code>
 					<span class="code__description"
 						>Como alternativa, puedes crear un nuevo repositorio dentro de un
 						nuevo directorio con el nombre especificado</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git clone [url]</code>
+					<code class="code__text">$ git clone [url]</code>
 					<span class="code__description"
 						>Se usa para copiar un repositorio y toda su historia de
 						versiones</span
@@ -113,42 +149,42 @@
 					Revisa las ediciones y elabora una transacción de commit
 				</p>
 				<p class="code">
-					<code class="code">$ git status</code>
+					<code class="code__text">$ git status</code>
 					<span class="code__description"
 						>Muestra la lista de los archivos que se han cambiado junto con los
 						archivos que están por ser preparados o confirmados</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git diff</code>
+					<code class="code__text">$ git diff</code>
 					<span class="code__description"
 						>Muestra las diferencias de archivos que no se han enviado aún al
 						área de espera</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git diff --staged</code>
+					<code class="code__text">$ git diff --staged</code>
 					<span class="code__description"
 						>Muestra las diferencias del archivo entre el área de espera y la
 						última versión del archivo</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git add [file]</code>
+					<code class="code__text">$ git add [file]</code>
 					<span class="code__description"
 						>Añade todos los archivos nuevos, modificados y eliminados a la
 						confirmación pendiente en el repositorio local.</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git reset [file]</code>
+					<code class="code__text">$ git reset [file]</code>
 					<span class="code__description"
 						>Mueve el archivo del área de espera, pero preserva su
 						contenido</span
 					>
 				</p>
 				<p class="code">
-					<code class="code"
+					<code class="code__text"
 						>$ git commit -m "[El mensaje que acompaña al commit va aquí]"</code
 					>
 					<span class="code__description"
@@ -163,35 +199,210 @@
 					Nombra una serie de commits y combina esfuerzos ya culminados
 				</p>
 				<p class="code">
-					<code class="code">$ git branch</code>
+					<code class="code__text">$ git branch</code>
 					<span class="code__description"
 						>Enumera todas las ramas en el repositorio actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git branch [branch-name]</code>
+					<code class="code__text">$ git branch [branch-name]</code>
 					<span class="code__description">Crea una nueva rama</span>
 				</p>
 				<p class="code">
-					<code class="code">$ git checkout [branch-name]</code>
+					<code class="code__text">$ git checkout [branch-name]</code>
 					<span class="code__description"
 						>Cambia a la rama especificada y actualiza el directorio
 						activo</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git merge [branch]</code>
+					<code class="code__text">$ git merge [branch]</code>
 					<span class="code__description"
 						>Combina el historial de la rama especificada con la rama
 						actual</span
 					>
 				</p>
 				<p class="code">
-					<code class="code">$ git branch -d [branch-name]</code>
+					<code class="code__text">$ git branch -d [branch-name]</code>
 					<span class="code__description">Borra la rama especificada</span>
 				</p>
 			</article>
-			<!--article.subject>h3.subject__title+p.subject__description+p.code>code.code+span.code__description-->
+			<article class="subject">
+				<h3 class="subject__title">NOMBRES DEL ARCHIVO DE REFACTORIZACIÓN</h3>
+				<p class="subject__description">
+					Reubica y retira los archivos con versión
+				</p>
+				<p class="code">
+					<code class="code__text">$ git rm [file]</code>
+					<span class="code__description"
+						>Borra el archivo del directorio activo y pone en el área de espera
+						el archivo borrado</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git rm --cached [file]</code>
+					<span class="code__description"
+						>Retira el archivo del control de versiones, pero preserva el
+						archivo a nivel local</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text"
+						>$ git mv [file-original] [file-renamed]</code
+					>
+					<span class="code__description"
+						>Cambia el nombre del archivo y lo prepara para commit</span
+					>
+				</p>
+			</article>
+			<article class="subject">
+				<h3 class="subject__title">SUPRIMIR TRACKING</h3>
+				<p class="subject__description">
+					Excluye los archivos temporales y las rutas
+				</p>
+				<p class="code">
+					<code class="code__text">*.log build/ temp-*</code>
+					<span class="code__description"
+						>Un archivo de texto llamado .gitignore suprime la creación
+						accidental de versiones de archivos y rutas que concuerdan con los
+						patrones especificados</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text"
+						>$ git ls-files --other --ignored --exclude-standard</code
+					>
+					<span class="code__description"
+						>Enumera todos los archivos ignorados en este proyecto</span
+					>
+				</p>
+			</article>
+			<article class="subject">
+				<h3 class="subject__title">GUARDAR FRAGMENTOS</h3>
+				<p class="subject__description">
+					Almacena y restaura cambios incompletos
+				</p>
+				<p class="code">
+					<code class="code__text">$ git stash</code>
+					<span class="code__description"
+						>Almacena temporalmente todos los archivos tracked modificados</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git stash pop</code>
+					<span class="code__description"
+						>Restaura los archivos guardados más recientemente</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git stash list</code>
+					<span class="code__description"
+						>Enumera todos los sets de cambios en guardado rápido</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git stash drop</code>
+					<span class="code__description"
+						>Elimina el set de cambios en guardado rápido más reciente</span
+					>
+				</p>
+			</article>
+			<article class="subject">
+				<h3 class="subject__title">REPASAR HISTORIAL</h3>
+				<p class="subject__description">
+					Navega e inspecciona la evolución de los archivos de proyecto
+				</p>
+				<p class="code">
+					<code class="code__text">$ git log</code>
+					<span class="code__description"
+						>Enumera el historial de la versión para la rama actual</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git log --follow [file]</code>
+					<span class="code__description"
+						>Enumera el historial de versión para el archivo, incluidos los
+						cambios de nombre</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text"
+						>$ git diff [first-branch]...[second-branch]</code
+					>
+					<span class="code__description"
+						>Muestra las diferencias de contenido entre dos ramas</span
+					>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git show [commit]</code>
+					<span class="code__description"
+						>Produce metadatos y cambios de contenido del commit
+						especificado</span
+					>
+				</p>
+			</article>
+			<article class="subject">
+				<h3 class="subject__title">REHACER COMMITS</h3>
+				<p class="subject__description">Borra errores y elabora historial de reemplazo</p>
+				<p class="code">
+					<code class="code__text">$ git reset [commit]</code>
+					<span class="code__description">Deshace todos los commits después de [commit], preservando los
+cambios localmente</span>
+				</p>
+				<p class="code">
+					<code class="code__text">$ git reset --hard [commit]</code>
+					<span class="code__description">Desecha todo el historial y regresa al commit especificado</span>
+				</p>
+			</article>
+
+			<!--
+				Emmet para crear un nuevo tema
+				article.subject>h3.subject__title+p.subject__description+p.code>code.code__text+span.code__description
+			-->
 		</section>
+		<footer class="footer">
+			<h2 class="footer__title">Creado por:</h2>
+			<ul class="humans">
+				<li class="humans__person">
+					<span class="humans__flag fflag fflag-CO ff-xl ff-wave"></span>
+					<span class="humans__name">Alejandra Espinosa</span
+					><span class="humans__country icon flag-colombia"
+						>Bogotá, Colombia</span
+					><a
+						href="https://www.linkedin.com/in/alejandra-espinosa-jim%C3%A9nez-871b2255/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="human__linkedin"
+						>Conóceme en Linkedin</a
+					>
+				</li>
+				<li class="humans__person">
+					<span class="humans__flag fflag fflag-EC ff-xl ff-wave"></span
+					><span class="humans__name">Dario Paladines</span
+					><span class="humans__location">Cuenca, Ecuador</span
+					><a
+						href="https://www.linkedin.com/in/dario-paladines-8648521aa/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="human__linkedin"
+						>Conóceme en Linkedin</a
+					>
+				</li>
+
+				<li class="humans__person">
+					<span class="humans__flag fflag fflag-CO ff-xl ff-wave"></span>
+					<span class="humans__name">Andrés Salazar</span
+					><span class="humans__country icon flag-colombia"
+						>Bogotá Colombia</span
+					><a
+						href="https://www.linkedin.com/in/andy-bosch-012021180/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="human__linkedin"
+						>Conóceme en Linkedin</a
+					>
+				</li>
+			</ul>
+		</footer>
 	</body>
 </html>
